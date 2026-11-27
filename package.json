@@ -1,0 +1,20 @@
+{
+  "name": "sekiroslop",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "fetch-assets": "node scripts/fetch-assets.mjs",
+    "dev:server": "npm --workspace=server run dev",
+    "dev:client": "npm --workspace=client run dev",
+    "dev": "concurrently -k -n SERVER,CLIENT -c yellow,cyan \"npm --workspace=server run dev\" \"npm --workspace=client run dev\"",
+    "build": "npm --workspace=shared run build && npm --workspace=server run build && npm --workspace=client run build",
+    "test:server": "npm --workspace=server run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

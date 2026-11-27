@@ -1,0 +1,18 @@
+{
+  "name": "SekiroSlop — 3D Multiplayer Arena Combat",
+  "short_name": "SekiroSlop",
+  "description": "Play SekiroSlop online: 3D multiplayer sword-combat arena with deflects, combat arts, co-op boss rush, 3v3 team battles, and FFA.",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0d0c0b",
+  "theme_color": "#0d0c0b",
+  "categories": ["games", "action"],
+  "icons": [
+    {
+      "src": "/assets/sekiroslop-hero.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg"
+    }
+  ]
+}
