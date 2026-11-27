@@ -5,6 +5,7 @@
 **3D Real-Time Multiplayer Sword-Combat Arena in Your Browser**
 
 [![Play Live](https://img.shields.io/badge/Play%20Live-sekiroslop--eight.vercel.app-d97706?style=for-the-badge)](https://sekiroslop-eight.vercel.app/)
+[![Vibe Coded](https://img.shields.io/badge/Vibe%20Coded-with%20AI-ec4899?style=for-the-badge)](https://github.com/BhavyaJyotiSingh/sekiroslop)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org/)
 [![Colyseus](https://img.shields.io/badge/Colyseus-Multiplayer-6366f1?style=for-the-badge)](https://colyseus.io/)
@@ -18,6 +19,8 @@
 Master timed deflects, posture breaks, shinobi slide dodges, aerial flight, and 14 signature combat arts across 4 distinct arenas on **PC, Android, and iPhone**.
 
 [Play Now](https://sekiroslop-eight.vercel.app/) · [Architecture & Codebase Map](CODEBASE.md)
+
+> *Note: This project is proudly vibe coded.*
 
 </div>
 
