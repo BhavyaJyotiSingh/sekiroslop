@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { getServerHealthUrl } from "../net/useColosseumRoom";
+import { shouldShowIosFullscreenTip } from "../input/mobileDisplay";
 
 interface LobbyScreenProps {
   connecting: boolean;
@@ -125,6 +126,12 @@ export function LobbyScreen({ connecting, error, onCreate, onJoin }: LobbyScreen
                 Join
               </button>
             </form>
+
+            {shouldShowIosFullscreenTip() && (
+              <p className="lobby-ios-note">
+                <strong>iPhone / iPad Fullscreen:</strong> Open in <strong>Safari → Share → Add to Home Screen</strong> to play as a full-screen app with no browser UI.
+              </p>
+            )}
           </div>
         </section>
       </main>

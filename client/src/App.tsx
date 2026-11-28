@@ -8,6 +8,7 @@ import {
   isMobileFullscreenSupported,
   isPortraitTouchDevice,
   requestMobileFullscreenLandscape,
+  shouldShowIosFullscreenTip,
 } from "./input/mobileDisplay";
 import type { ArenaMapKind, CombatArtKind, PlayerAbilityKind, PlayerSkinKind, RespawnMode } from "@sekiroslop/shared";
 import { soundEngine } from "./audio/SoundEngine";
@@ -268,7 +269,14 @@ export function App() {
                 </button>
               </div>
             ) : (
-              <p style={{ opacity: 0.78, fontSize: 13 }}>Turn your phone sideways to continue.</p>
+              <>
+                <p style={{ opacity: 0.78, fontSize: 13 }}>Turn your phone sideways to continue.</p>
+                {shouldShowIosFullscreenTip() && (
+                  <p style={{ opacity: 0.78, fontSize: 12, marginTop: 6 }}>
+                    For fullscreen on iPhone/iPad: <strong>Safari → Share → Add to Home Screen</strong>.
+                  </p>
+                )}
+              </>
             )}
           </div>
         </div>

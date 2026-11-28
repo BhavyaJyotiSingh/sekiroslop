@@ -8,6 +8,28 @@ type OrientationWithLock = ScreenOrientation & {
   lock?: (orientation: "landscape") => Promise<void>;
 };
 
+export function isIosDevice(): boolean {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent ?? "";
+  return (
+    /iPad|iPhone|iPod/i.test(ua) ||
+    (navigator.platform === "MacIntel" && (navigator.maxTouchPoints ?? 0) > 1)
+  );
+}
+
+export function isIosStandaloneMode(): boolean {
+  if (typeof window === "undefined") return false;
+  const nav = navigator as Navigator & { standalone?: boolean };
+  return (
+    nav.standalone === true ||
+    window.matchMedia?.("(display-mode: standalone)").matches === true
+  );
+}
+
+export function shouldShowIosFullscreenTip(): boolean {
+  return isIosDevice() && !isIosStandaloneMode();
+}
+
 export function isPortraitTouchDevice(): boolean {
   return (
     isTouchDevice() &&
